@@ -22,14 +22,10 @@ const NavBar = () => {
         background: "none"
       }}
       >
-        <div><img src="" alt="logo1"
-        style={{
-          width: "100px",
-          height: "50px",
-          objectFit: "contain"
-        }}
+        <div><img src="../images/wehelplogo.png" alt="logo1"
+       
         />
-        <img src= "assets/images/WeHelp.png" alt="logo"/>
+        <img src= "../images/WeHelp.png" alt="logo"/>
         </div>
 
         <Link

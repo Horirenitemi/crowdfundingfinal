@@ -84,7 +84,7 @@ style={{
   <div
   style={{
       width:"300px",
-      backgroundColor:"lightblue",
+      backgroundColor:"rgba(93, 173, 170, 0.07)",
       margin:"20px",
       borderRadius:"10px"
 
@@ -128,7 +128,7 @@ style={{
            borderRadius:"40px",
            justifyContent:"center",
            alignItems:"center",
-           backgroundColor: "tomato",
+           backgroundColor: "#FD6F68",
            border: "2px solid white",
            fontWeight:"bold",
            fontSize:"20px"
@@ -170,7 +170,7 @@ style={{
     <div
     style={{
       width:"300px",
-      backgroundColor:"lightblue",
+      backgroundColor:"rgba(93, 173, 170, 0.07)",
       margin:"20px",
       borderRadius:"10px"
   

@@ -9,4 +9,5 @@ export const app = firebase.initializeApp({
     storageBucket: "crowd-funding-c5881.appspot.com",
     messagingSenderId: "600913486995",
     appId: "1:600913486995:web:dd051006b34a5ce5ab1966"
+  
     });

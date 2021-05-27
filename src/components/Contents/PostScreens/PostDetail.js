@@ -47,8 +47,10 @@ const config = {
   publicKey: 'pk_test_d632bf4b9aa1e74745eb158cec8034961dc13b18',
 };
     const initializePayment = usePaystackPayment(config);
+
+    
     return (
-      <div>
+      <div >
         <div
         style={{
           margin:"10px",
@@ -57,10 +59,12 @@ const config = {
         >Amount Entered: {
           amount === "" ? 0 : parseInt(amount) / 100
         }</div>
-<Input  
+
+      <Input  
         placeholder="How much would you love to Donate"
         style={{
-          marginBottom:"10px"
+          width: "400px",
+          marginTop:"10px"
         }}
         value={amount}
         onChange={(e)=>{
@@ -72,10 +76,13 @@ const config = {
           type="primary"
           danger
           style={{
-            margin:"10px, 10px",
-            width:"100%",
-
-          }}
+           color: "white",
+           backgroundColor: "#fd6f68",
+           borderRadius: "5px",
+           marginLeft: "50px",
+           marginTop: "20px",
+           
+         }}
           onClick={() => {
               initializePayment(onSuccess, onClose)
           }}>Donate</Button>
@@ -130,12 +137,24 @@ const viewComments = async() => {
   
 
   return (
+    <div style={{
+                display: "flex",
+                justifyContent: "center",
+                width: "800px",
+                height: "900px",
+                marginLeft: "205px",
+                marginTop: "50px",
+                //boxShadow: "0px 8px 16px",
+                borderRadius: "15px",
+                background: "rgba(93, 173, 170, 0.07)"
+       }}>
     <div
     style={{
       display:"flex",
       flexWrap:"wrap",
       justifyContent:"center",
-      marginTop:"30px"
+      marginTop:"30px",
+      marginLeft: "50px",
     }}
     >
       <div>
@@ -143,15 +162,17 @@ const viewComments = async() => {
         <img
           src={post && post.coverImage}
           style={{
-            width:"100%",
+            justifyContent: "center",
+            width:"300px",
             height:"300px",
             objectFit:"cover",
-            marginTop:"10px"
+            marginTop:"50px"
           }}
         />
         <div
         style={{
           padding:"10px 10px",
+          marginTop: "20px"
 
 
         }}
@@ -173,15 +194,24 @@ const viewComments = async() => {
          >Amount to Raise:  #{post && post.amount} </div>
 
         <div
+        style={{
+           marginTop:"20px",
+           //fontWeight:"bold",
+           //display:"flex",
+           //justifyContent:"center",
+           //width:"100%",
+          //  fontSize:"18px"
+
+         }}
          >Amount to Raised so far:  #{post && post.amountRaise/100 }</div>
         </div>
          <div
          style={{
-           marginTop:"22px",
+           marginTop:"20px",
            fontWeight:"bold",
            display:"flex",
-           justifyContent:"center",
-           width:"100%",
+           //justifyContent:"center",
+           //width:"100%",
            fontSize:"20px"
 
          }}
@@ -190,8 +220,7 @@ const viewComments = async() => {
 
          >Total Amount Raise:  #{post && ( post.amountRaise + post.totalAmount)/100 }</div>
 
-<br/>
-<br/>
+
 <MakePayment />
 <div
 style={{
@@ -204,12 +233,15 @@ style={{
   style={{
     marginBottom:"10px",
     display:"flex",
-    justifyContent:"center",
+    //justifyContent:"center",
     fontWeight:"bold",
     textTransform:"uppercase"
   }}
   >Add Feedback or Comment</div>
-  <Input
+  <Input style={{
+    width: "300px",
+    height: "100px"
+  }}
     placeholder="Place a comment"
     value={comment}
     onChange={(e)=>{
@@ -220,11 +252,14 @@ style={{
   style={{
     display:"flex",
     // width:"100%",
-    flexDirection:"row-reverse",
+    //flexDirection:"row-reverse",
     marginTop:"10px"
   }}
  >
- <Button
+ <Button style={{
+   marginLeft: "100px",
+   marginTop: "20px"
+ }}
   type="primary"
  onClick={makeComment}
   >Add Comment</Button>
@@ -270,6 +305,7 @@ style={{
       </div>
      <div>
    </div>
+  </div>
   </div>
   )
 }

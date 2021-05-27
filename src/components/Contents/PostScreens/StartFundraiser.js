@@ -59,17 +59,35 @@ const Post = () => {
       <div
       style={{
         display:"flex",
-        flexDirection:"column",
+        //flexDirection:"column",
         justifyContent:"center",
-        width:"300px",
-        marginTop:"10px"
+         width: "500px",
+          height: "500px",
+          marginLeft: "205px",
+           marginTop: "50px",
+          //boxShadow: "0px 8px 16px",
+          borderRadius: "15px",
+          background: "rgba(93, 173, 170, 0.07)"
       }}
       >
-      <div>Post Screen</div>
-      <div>
+      
+      <div style={{
+         justifyContent: "center",
+         marginLeft: "50px",
+      }}>
+        <div style={{
+        display: "flex",
+        justifyContent: "center",
+        marginTop: "50px",
+      }}> <h2 style={{
+        fontWeight: "bold",
+      }}>Enter your Goal</h2></div>
         <Input
         style={{
-          margin:"10px 0",
+          //margin:"10px 0",
+          justifyContent: "center",
+          marginTop: "20px",
+          width: "300px"
         }}
         type="file"
 
@@ -78,8 +96,10 @@ const Post = () => {
         <Input
         style={{
           margin:"10px 0",
+          width: "300px",
+          color: "#212121"
         }}
-          placeholder="title"
+          placeholder=" Campaign Title"
           value={title}
           onChange={(e)=>{
             setTitle(e.target.value)
@@ -88,6 +108,7 @@ const Post = () => {
         <Input
         style={{
           margin:"10px 0",
+          width: "300px"
         }}
           placeholder="Amount"
           value={amount}
@@ -98,6 +119,8 @@ const Post = () => {
         <Input
         style={{
           margin:"10px 0",
+          width: "300px",
+          height: "80px"
         }}
           placeholder="Tell your Story"
           value={brife}
@@ -108,6 +131,7 @@ const Post = () => {
         <Input
         style={{
           margin:"10px 0",
+          width: "300px"
         }}
           placeholder="Tell us in detail how should people help"
           value={detail}
@@ -118,7 +142,7 @@ const Post = () => {
 
 <Button
 style={{
-  width:"100%",
+  width:"300px",
   height:"50px"
 }}
 type="primary"
